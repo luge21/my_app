@@ -3,7 +3,7 @@ import 'package:my_app/models/quiz_question.dart';
 const questions = [
   // Q1 → correct = option 1
   QuizQuestion(
-    "How much IMAX footage was used in *The Dark Knight* (2008)?",
+    "How much IMAX footage was used in The Dark Knight?",
     [
       "28 min",  
       "47 min",
@@ -23,22 +23,12 @@ const questions = [
   ),
 
   QuizQuestion(
-    "In *Mission: Impossible Fallout*, Tom Cruise performed which real stunt?",
+    "In Mission: Impossible Fallout, Tom Cruise performed which stunt?",
     [
       "Motorcycle backflip",
       "Fighter jet flight",
       "Halo jump", 
       "Free solo climb El Capitan",
-    ],
-  ),
-
-  QuizQuestion(
-    "Which movie stunned audiences with groundbreaking 3D and CGI visuals in 2009?",
-    [
-      "The Matrix Reloaded",
-      "Inception",
-      "Transformers",
-      "Avatar",
     ],
   ),
 
