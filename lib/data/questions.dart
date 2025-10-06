@@ -44,4 +44,26 @@ const questions = [
   ],
   "Scarface",
 ),
+
+QuizQuestion(
+  "Who was the first actor to play James Bond in the official film series?",
+  [
+    "Roger Moore",
+    "Sean Connery",
+    "Pierce Brosnan",
+    "Daniel Craig",
+  ],
+  "Sean Connery",
+),
+
+QuizQuestion(
+  "Which famous actor also directed 'Million Dollar Baby'?",
+  [
+    "Clint Eastwood",
+    "Ron Howard",
+    "George Clooney",
+    "Mel Gibson",
+  ],
+  "Clint Eastwood",
+),
 ];
