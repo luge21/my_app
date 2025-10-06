@@ -11,16 +11,31 @@ class QuestionsSummary extends StatelessWidget {
       children: summaryData.map((data) {
         return Row(
           children: [
-            Text(((data['question_index'] as int) + 1).toString()),
+            Text(((data['question_index'] as int) + 1).toString(),
+            style: const TextStyle(
+              color: Colors.white,
+            )),
             Expanded(
               child: Column(
                 children: [
-                  Text(data['question'] as String),
+                  Text(data['question'] as String,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  )),
                   const SizedBox(
                     height: 5,
                   ),
-                  Text(data['correct_answer'] as String),
-                  Text(data['user_answer'] as String),
+                  Text(data['correct_answer'] as String,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  )),
+                  Text(data['user_answer'] as String,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  )),
                 ],
               ),
             ),

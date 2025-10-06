@@ -1,7 +1,6 @@
 import 'package:my_app/models/quiz_question.dart';
 
 const questions = [
-  // Q1 → correct = option 1
   QuizQuestion(
     "How much IMAX footage was used in The Dark Knight?",
     [
@@ -10,6 +9,7 @@ const questions = [
       "1 hr 2 min",
       "2 hr 32 min",
     ],
+    "28 min",
   ),
 
   QuizQuestion(
@@ -20,6 +20,7 @@ const questions = [
       "Spider-Man: Homecoming",
       "Doctor Strange",
     ],
+    "Captain America: Civil War",
   ),
 
   QuizQuestion(
@@ -30,6 +31,7 @@ const questions = [
       "Halo jump", 
       "Free solo climb El Capitan",
     ],
+    "Halo jump", 
   ),
 
   QuizQuestion(
@@ -40,5 +42,6 @@ const questions = [
     "Terminator",
     "Scarface",
   ],
+  "Scarface",
 ),
 ];

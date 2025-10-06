@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'questions_summary.dart'; 
+import 'package:my_app/questions_summary.dart'; 
 import 'package:my_app/data/questions.dart'; 
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAnswers});
+  const ResultsScreen({super.key, required this.chosenAnswers, required this.onRestart});
   final List<String> chosenAnswers;
+  final void Function() onRestart;
 
   List<Map<String, Object>> getSummaryData() {
     List<Map<String, Object>> summary = [];
@@ -13,7 +14,7 @@ class ResultsScreen extends StatelessWidget {
       summary.add({
         'question_index': i,
         'question': questions[i].text,
-        'correct_answer': questions[i].answers[0],
+        'correct_answer': questions[i].correctAnswer,
         'user_answer': chosenAnswers[i],
       });
     }
@@ -22,6 +23,14 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
+    var summaryData = getSummaryData();
+    var totalQuestions = summaryData.length;
+    var correctAnswers = 0;
+    for (var data in summaryData) {
+      if (data['user_answer'] == data['correct_answer']) {
+        correctAnswers++;
+      }
+    }
     return SizedBox(
       width: double.infinity,
       child: Container(
@@ -29,12 +38,18 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('You answered X out of Y questions Correctly'),
+            Text('You answered $correctAnswers out of $totalQuestions correctly!',
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 36,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Roboto',
+            )),
             const SizedBox(height: 30),
             QuestionsSummary(summaryData: getSummaryData()),
             const SizedBox(height: 30),
             TextButton(
-              onPressed: () {},
+              onPressed: onRestart,
               child: const Text('Restart Quiz'),
             ),
           ],

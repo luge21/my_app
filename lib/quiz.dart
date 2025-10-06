@@ -21,12 +21,20 @@ class _QuizState extends State<Quiz> {
     selectedAnswers.add(answer);
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        //selectedAnswers = [];
+        // selectedAnswers = [];
         activeScreen = ResultsScreen(
           chosenAnswers: selectedAnswers,
+          onRestart: restartQuiz,
         );
       });
     }
+  }
+
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = []; 
+      activeScreen = StartScreen(switchScreen);
+    });
   }
 
   @override
@@ -51,8 +59,8 @@ class _QuizState extends State<Quiz> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(255, 78, 13, 151),
-                Color.fromARGB(255, 107, 15, 168),
+                Color.fromARGB(255, 25, 94, 255),
+                Color.fromARGB(255, 0, 11, 80),
               ],
             ),
           ),
