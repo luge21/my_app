@@ -19,6 +19,8 @@ class _NewExpenseState extends State<NewExpense> {
   DateTime? _selectedDate;
   Category _selectedCategory = Category.leisure;
 
+  
+
   @override
   void dispose() {
     _titleController.dispose();
