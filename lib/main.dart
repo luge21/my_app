@@ -1,13 +1,12 @@
 import 'package:my_app/widgets/expenses.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
+// import 'package:flutter/services.dart';
 var kColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color.fromARGB(255, 96, 59, 181),
+  seedColor: const Color.fromARGB(255, 19, 70, 234),
 );
 var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: Color.fromARGB(255, 5, 99, 125),
+  seedColor: Color.fromARGB(255, 20, 220, 255),
 );
 void main() {
   runApp(
@@ -49,7 +48,6 @@ void main() {
           ),
         ),
       ),
-
       home: Expenses(),
     ),
   );

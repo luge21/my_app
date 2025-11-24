@@ -48,26 +48,83 @@ class _ExpensesState extends State<Expenses> {
     );
   }
 
-  final List<Expense> _registeredExpenses = [
-    Expense(
-      title: 'Cheeseburger',
-      amount: 12.45,
-      date: DateTime.now(),
-      category: Category.food,
-    ),
-    Expense(
-      title: 'Movie Ticket',
-      amount: 18.99,
-      date: DateTime.now(),
-      category: Category.leisure,
-    ),
-    Expense(
-      title: 'Train ticket',
-      amount: 34.00,
-      date: DateTime.now(),
-      category: Category.travel,
-    ),
-  ];
+final List<Expense> _registeredExpenses = [
+  Expense(
+    title: 'Cheeseburger',
+    amount: 12.45,
+    date: DateTime.now(),
+    category: Category.food,
+  ),
+  Expense(
+    title: 'Chicken Sandwich',
+    amount: 10.90,
+    date: DateTime.now(),
+    category: Category.food,
+  ),
+  Expense(
+    title: 'Vegan Burger',
+    amount: 13.75,
+    date: DateTime.now(),
+    category: Category.food,
+  ),
+
+  Expense(
+    title: 'Movie Ticket',
+    amount: 18.99,
+    date: DateTime.now(),
+    category: Category.leisure,
+  ),
+  Expense(
+    title: 'Sports Game',
+    amount: 45.00,
+    date: DateTime.now(),
+    category: Category.leisure,
+  ),
+  Expense(
+    title: 'Tech Expo',
+    amount: 65.00,
+    date: DateTime.now(),
+    category: Category.leisure,
+  ),
+
+  Expense(
+    title: 'Plane Ticket',
+    amount: 280.00,
+    date: DateTime.now(),
+    category: Category.travel,
+  ),
+  Expense(
+    title: 'Train Ticket',
+    amount: 34.00,
+    date: DateTime.now(),
+    category: Category.travel,
+  ),
+  Expense(
+    title: 'Ferry Ticket',
+    amount: 22.50,
+    date: DateTime.now(),
+    category: Category.travel,
+  ),
+
+  Expense(
+    title: 'Office Supplies',
+    amount: 29.99,
+    date: DateTime.now(),
+    category: Category.work,
+  ),
+  Expense(
+    title: 'Wireless Headset',
+    amount: 20.00,
+    date: DateTime.now(),
+    category: Category.work,
+  ),
+  Expense(
+    title: 'Printer Ink',
+    amount: 55.00,
+    date: DateTime.now(),
+    category: Category.work,
+  ),
+];
 
   @override
   Widget build(BuildContext context) {
