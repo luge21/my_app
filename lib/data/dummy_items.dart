@@ -1,7 +1,7 @@
 import 'package:my_app/models/grocery_item.dart';
 import 'package:my_app/data/categories.dart';
-
-const groceryItems = [
+import 'package:my_app/models/category.dart';
+final groceryItems = [
   GroceryItem(
       id: 'a',
       name: 'Milk',

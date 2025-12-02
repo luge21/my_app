@@ -2,18 +2,18 @@
 import 'package:flutter/material.dart';
 
 enum Categories{
-  vegetables,
+  vegetables, 
   fruit,
-  meat,
-  diary,
-  carbs,
-  sweets,
-  spices,
+  meat, 
+  dairy, 
+  carbs, 
+  sweets, 
+  spices, 
   convenience,
-  hygiene,
+  hygiene, 
   other
 }
-//class category
+//class cateogry
 class Category{
   const Category(this.title, this.color);
   final String title;
